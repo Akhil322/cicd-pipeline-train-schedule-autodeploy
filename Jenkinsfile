@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: GIT_BRANCH]]])
-
             }
         }
         stage('Build') {
@@ -22,7 +21,7 @@ sh "docker images"
         stage('Push') {
             steps {
 sh "docker login -u akhil322 -p Akhil@322"
-sh "docker push akhil22/edureka:0.1"
+sh "docker push akhil322/edureka:0.1"
             }
         }
         stage("Deploy") {
