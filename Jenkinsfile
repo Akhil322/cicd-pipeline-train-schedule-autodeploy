@@ -15,14 +15,14 @@ pipeline {
         stage('Build') {
             steps {
 sh "ls -ltr"
-sh "docker build -t ruhan22/edureka:0.1 ."
+sh "docker build -t akhil322/edureka:0.1 ."
 sh "docker images"
             }
         }
         stage('Push') {
             steps {
-sh "docker login -u ruhan22 -p KillDocker@22"
-sh "docker push ruhan22/edureka:0.1"
+sh "docker login -u akhil322 -p Akhil@322"
+sh "docker push akhil22/edureka:0.1"
             }
         }
         stage("Deploy") {
