@@ -20,7 +20,7 @@ sh "docker images"
         }
         stage('Push') {
             steps {
-sh "docker login -u akhil322 -p Akhil@322"
+sh "docker login -u "
 sh "docker push akhil322/edureka:0.1"
             }
         }
